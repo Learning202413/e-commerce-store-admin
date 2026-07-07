@@ -1,0 +1,221 @@
+/* =========================================
+   App.css - Contenedor Principal (Dashboard Shell)
+   ========================================= */
+
+/* Indicador de métricas (Ej: Total de Órdenes o Stock Global) */
+.counter {
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-medium);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.counter:hover {
+  background: var(--bg-surface-hover);
+  border-color: var(--text-muted);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.counter:focus-visible {
+  outline: 2px solid var(--primary-accent);
+  outline-offset: 2px;
+}
+
+/* Área hero (Encabezado del panel) */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+}
+
+/* Adiós a los brillos de neón. Ahora usamos sombras suaves de retail */
+.hero .base,
+.hero .framework,
+.hero .vite {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+  transition: filter var(--transition-normal);
+}
+
+.hero:hover .base {
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* Contenedor central */
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  place-content: flex-start;
+  place-items: center;
+  flex-grow: 1;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  #center {
+    padding: 2rem 1.5rem;
+    gap: 20px;
+  }
+}
+
+/* Panel de tarjetas (Ideal para accesos: Inventario | Órdenes | Reseñas) */
+#next-steps {
+  display: flex;
+  width: 100%;
+  background: var(--bg-surface); /* Blanco puro */
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  overflow: hidden; /* Mantiene los bordes redondeados limpios */
+}
+
+#next-steps > div {
+  flex: 1 1 0;
+  padding: 2.5rem;
+  transition: background-color var(--transition-fast);
+}
+
+#next-steps > div:hover {
+  background-color: var(--bg-surface-hover); /* Un ligerísimo gris perla al pasar el mouse */
+}
+
+/* Íconos corporativos y nítidos */
+#next-steps .icon {
+  margin-bottom: 1rem;
+  width: 28px;
+  height: 28px;
+  color: var(--primary-accent); /* Color oscuro elegante */
+}
+
+@media (max-width: 1024px) {
+  #next-steps {
+    flex-direction: column;
+    text-align: center;
+  }
+  #next-steps .icon {
+    margin: 0 auto 1rem auto;
+  }
+}
+
+/* Separadores internos de las columnas */
+#docs {
+  border-right: 1px solid var(--border-color);
+}
+
+@media (max-width: 1024px) {
+  #docs {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+/* Botones de acción rápida (Enlaces secundarios) */
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+  margin: 2rem 0 0;
+}
+
+#next-steps ul .logo {
+  height: 20px;
+}
+
+#next-steps ul a {
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-sm);
+  background: var(--bg-color); /* Fondo gris claro neutral */
+  border: 1px solid var(--border-color);
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+#next-steps ul a:hover {
+  background: var(--bg-surface);
+  border-color: var(--primary-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+#next-steps ul a .button-icon {
+  height: 18px;
+  width: 18px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  #next-steps ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  #next-steps ul li {
+    flex: 1 1 calc(50% - 12px);
+  }
+  #next-steps ul a {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+
+/* Espaciador decorativo */
+#spacer {
+  height: 60px;
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 1024px) {
+  #spacer {
+    height: 40px;
+  }
+}
+
+/* Detalles visuales estructurados */
+.ticks {
+  position: relative;
+  width: 100%;
+}
+
+.ticks::before,
+.ticks::after {
+  content: '';
+  position: absolute;
+  top: -4.5px;
+  border: 5px solid transparent;
+}
+
+.ticks::before {
+  left: 0;
+  border-left-color: var(--border-color);
+}
+
+.ticks::after {
+  right: 0;
+  border-right-color: var(--border-color);
+}
+
+
+

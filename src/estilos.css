@@ -1,0 +1,467 @@
+
+/* =========================================
+   Estilos Minimalista Premium - Split Login
+   ========================================= */
+
+.login-split-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    font-family: var(--font-family);
+}
+
+/* --- Panel Izquierdo (Imagen de Moda/Ropa) --- */
+.login-brand-panel {
+    flex: 1;
+    position: relative;
+    /* Imagen sugerida: Un almacén de ropa limpio o un perchero minimalista */
+    background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem;
+    color: white;
+}
+
+.login-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.2) 100%);
+    z-index: 1;
+}
+
+.login-brand-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.login-brand-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.login-brand-content .text-highlight {
+    color: #f8fafc; /* Blanco perla */
+    opacity: 0.9;
+}
+
+.login-brand-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #cbd5e1; /* Gris claro sutil */
+}
+
+/* --- Panel Derecho (Formulario Blanco Puro) --- */
+.login-form-panel {
+    width: 500px;
+    background-color: var(--bg-surface); /* Blanco */
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.login-form-wrapper {
+    width: 100%;
+    max-width: 380px;
+}
+
+/* Logo superior */
+.login-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--primary-accent); /* Slate 900 - Negro elegante */
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.logo-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.logo-subtitle {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Textos de bienvenida */
+.login-titles {
+    margin-bottom: 2rem;
+}
+
+.login-titles h3 {
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.login-titles p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Caja de credenciales */
+.credentials-hint {
+    background-color: var(--bg-color); /* Fondo gris perlado */
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.hint-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+.hint-row:last-child { margin-bottom: 0; }
+
+/* Inputs con íconos */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-muted);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 1px solid var(--border-color);
+    background-color: #ffffff;
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.1);
+    outline: none;
+}
+
+/* Botón Primary (Negro Elegante) */
+.login-btn-primary {
+    background-color: var(--primary-accent);
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.login-btn-primary:hover {
+    background-color: var(--primary-accent-hover);
+}
+
+.login-error {
+    background-color: var(--danger-bg);
+    color: var(--danger);
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    border-left: 3px solid var(--danger);
+}
+
+/* Footer */
+.login-footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .login-split-container {
+        flex-direction: column;
+    }
+    .login-brand-panel {
+        display: none;
+    }
+    .login-form-panel {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   Componentes de Dashboard (Alertas y Tablas)
+   ========================================= */
+
+/* Cajas de Alerta (Éxito / Error) */
+.alert-box {
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
+    border-left: 4px solid;
+}
+
+.alert-danger {
+    background-color: var(--danger-bg);
+    color: #991b1b;
+    border-left-color: var(--danger);
+}
+
+.alert-success {
+    background-color: var(--success-bg);
+    color: #065f46;
+    border-left-color: var(--success);
+}
+
+/* Tablas de Datos (Estilo SaaS / Retail) */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.data-table th {
+    text-align: left;
+    padding: 1rem;
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-semibold);
+    border-bottom: 2px solid var(--border-color);
+    background-color: var(--bg-surface-hover);
+}
+
+.data-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+    vertical-align: middle;
+}
+
+.data-table tr:hover td {
+    background-color: var(--bg-surface-hover);
+}
+
+.data-table .text-muted {
+    color: var(--text-muted);
+}
+
+/* Inputs y Botones pequeños para la columna de acciones */
+.stock-input {
+    width: 70px !important;
+    padding: 0.4rem !important;
+    text-align: center;
+}
+
+.btn-icon {
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-icon.add {
+    color: var(--success);
+    background-color: var(--success-bg);
+}
+.btn-icon.add:hover {
+    background-color: #d1fae5;
+    border-color: var(--success);
+}
+
+.btn-icon.remove {
+    color: var(--danger);
+    background-color: var(--danger-bg);
+}
+.btn-icon.remove:hover {
+    background-color: #fee2e2;
+    border-color: var(--danger);
+}
+
+
+/* =========================================
+   Navegación Superior (Navbar)
+   ========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03); /* Sombra súper sutil de Retail */
+    padding: 0.75rem 0;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+}
+
+.logo-icon-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-accent); /* Negro elegante */
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar-logo:hover {
+    text-decoration: none; /* Prevenir subrayado de enlaces globales */
+}
+
+/* Distribución del Menú */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Enlaces (Indicadores de Estado Activo) */
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
+    text-decoration: none !important;
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-surface-hover);
+}
+
+/* La joya de la corona UX: Destacar dónde está el usuario */
+.nav-link.active {
+    color: var(--primary-accent);
+    background-color: var(--border-color);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Separador Visual */
+.navbar-divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--border-color);
+}
+
+/* Sección de Usuario */
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-secondary);
+    background-color: var(--bg-color); /* Fondo gris perlado */
+    padding: 0.4rem 1rem;
+    border-radius: 9999px; /* Forma de píldora */
+    border: 1px solid var(--border-color);
+}
+
+.logout-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+/* Ajustes Móviles */
+@media (max-width: 768px) {
+    .navbar-menu {
+        gap: 0.75rem;
+    }
+    .navbar-divider,
+    .user-badge span,
+    .logout-btn span,
+    .nav-link span {
+        display: none; /* Ocultar textos en móvil, dejar solo los íconos */
+    }
+    .nav-link {
+        padding: 0.5rem;
+    }
+}
