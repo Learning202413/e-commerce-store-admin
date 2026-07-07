@@ -1,4 +1,4 @@
-const BASE_URL = '/api/v1';
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://sistematextil.pp.ua/api/v1';
 
 // Helper to get auth headers
 const getHeaders = (requireAuth = false) => {
